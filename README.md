@@ -149,11 +149,11 @@ Kemudian, kita melakukan filter untuk mencari packet no. 7812 dengan menggunakan
 
 Setelah mendapat packet no. 7812, bisa kita lihat source address paket tersebut yaitu 104.18.14.101, setelah itu kita ubah angka-angka tersebut menjadi alphabet.
 
-10 = J
-4 = D
-18 = R
-14 = N
-10 = J
+10 = J  
+4 = D  
+18 = R  
+14 = N  
+10 = J  
 1 = A
 
 Setelah diurutkan, dapatlah hasilnya yaitu JDRNJA.
