@@ -95,8 +95,11 @@
 5. Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 
    Pada soal ini kita mendapat file capture tetapi untuk mendapatkan pertanyaan dari soal, kita harus unlock zip file yang memiliki password. Pertama, kita buka terlebih dahulu file capture untuk nomor 5 di wireshark. Setelah itu, kita pilih salah satu packet kemudian klik kanan lalu follow TCP Stream. 
+   
    ![5](assets/5.png)
+   
    Kita sudah berhasil mendapatkan password untuk membuka zip file, tetapi kita harus decode passwordnya terlebih dahulu di Base64. 
+   
    ![5(1)](assets/5(1).png)
 
    Setelah kita decode, barulah kita mendapatkan passowrd untuk membuka zip filenya dan mendapat pertanyaannya sebagai berikut.
@@ -105,23 +108,57 @@
    → 60
 
    Screenshot:
+   
    ![5a](assets/5a.png)
 
    b. Port berapakah pada server yang digunakan untuk service SMTP?
    → 25
 
    Screenshot:
+   
    ![5b](assets/5b.png)
 
    c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
    → 74.53.140.153
 
    Screenshot:
+   
    ![5c](assets/5c.png)
 
 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
-   Langkah Pengerjaan:
+Langkah Pengerjaan:
+   
+Clue soal nomor 6 adalah:
+- "server SOURCE ADDRESS 7812 is invalid"
+Pada clue di atas bisa disimpulkan bahwa kita hanya perlu fokus pada source address pada packet no. 7812
+- a1 e5 u21
+Pada clue berikut kita perlu mengurutkan angka-angka sesuai alphabet.
+
+A = 1		H = 8		O = 15		V = 22
+B = 2		I = 9		P = 16		W = 23
+C = 3		J = 10	Q = 17		X = 24
+D = 4		K = 11	R = 18		Y = 25
+E = 5		L = 12	S = 19		Z = 26
+F = 6		M = 13	T = 20
+G = 7		N = 14	U =21
+
+Kemudian, kita melakukan filter untuk mencari packet no. 7812 dengan menggunakan query frame.number==7812.
+
+![6a](assets/6a.png)
+
+Setelah mendapat packet no. 7812, bisa kita lihat source address paket tersebut yaitu 104.18.14.101, setelah itu kita ubah angka-angka tersebut menjadi alphabet.
+
+10 = J
+4 = D
+18 = R
+14 = N
+10 = J
+1 = A
+
+Setelah diurutkan, dapatlah hasilnya yaitu JDRNJA.
+
+![6b](assets/6b.png)
 
 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
 
@@ -135,13 +172,21 @@
 
 8. Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
+   → tcp.port == 80 || udp.port == 80
+
    Screenshot:
+
+   ![8b](assets/8b.png)
 
    ![8a](assets/8a.png)
 
 9. Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 
+   → ip.src == 10.51.40.1 && ip.dst != 10.39.55.34
+
    Screenshot:
+
+   ![9b](assets/9b.png)
 
    ![9a](assets/9a.png)
 
