@@ -94,13 +94,30 @@
 
 5. Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 
-   a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+   Pada soal ini kita mendapat file capture tetapi untuk mendapatkan pertanyaan dari soal, kita harus unlock zip file yang memiliki password. Pertama, kita buka terlebih dahulu file capture untuk nomor 5 di wireshark. Setelah itu, kita pilih salah satu packet kemudian klik kanan lalu follow TCP Stream. 
+   ![5](assets/5.png)
+   Kita sudah berhasil mendapatkan password untuk membuka zip file, tetapi kita harus decode passwordnya terlebih dahulu di Base64. 
+   ![5(1)](assets/5(1).png)
+
+   Setelah kita decode, barulah kita mendapatkan passowrd untuk membuka zip filenya dan mendapat pertanyaannya sebagai berikut.
    
+   a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+   → 60
+
    Screenshot:
+   ![5a](assets/5a.png)
 
    b. Port berapakah pada server yang digunakan untuk service SMTP?
+   → 25
+
+   Screenshot:
+   ![5b](assets/5b.png)
 
    c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+   → 74.53.140.153
+
+   Screenshot:
+   ![5c](assets/5c.png)
 
 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
