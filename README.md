@@ -172,7 +172,7 @@ Setelah diurutkan, dapatlah hasilnya yaitu JDRNJA.
 
 8. Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
-   → tcp.port == 80 || udp.port == 80
+   → tcp.dstport == 80 || udp.dstport == 80
 
    Screenshot:
 
