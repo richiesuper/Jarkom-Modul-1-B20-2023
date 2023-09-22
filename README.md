@@ -127,38 +127,42 @@
 
 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
-Langkah Pengerjaan:
+   Langkah Pengerjaan:
    
-Clue soal nomor 6 adalah:
-- "server SOURCE ADDRESS 7812 is invalid"
-Pada clue di atas bisa disimpulkan bahwa kita hanya perlu fokus pada source address pada packet no. 7812
-- a1 e5 u21
-Pada clue berikut kita perlu mengurutkan angka-angka sesuai alphabet.
+   Clue soal nomor 6 adalah:
 
-A = 1		H = 8		O = 15		V = 22  
-B = 2		I = 9		P = 16		W = 23  
-C = 3		J = 10	Q = 17		X = 24  
-D = 4		K = 11	R = 18		Y = 25  
-E = 5		L = 12	S = 19		Z = 26  
-F = 6		M = 13	T = 20  
-G = 7		N = 14	U =21
+   - "server SOURCE ADDRESS 7812 is invalid"
+   
+   Pada clue di atas bisa disimpulkan bahwa kita hanya perlu fokus pada source address pada packet no. 7812
 
-Kemudian, kita melakukan filter untuk mencari packet no. 7812 dengan menggunakan query frame.number==7812.
+   - a1 e5 u21
 
-![6a](assets/6a.png)
+   Pada clue berikut kita perlu mengurutkan angka-angka sesuai alphabet.
 
-Setelah mendapat packet no. 7812, bisa kita lihat source address paket tersebut yaitu 104.18.14.101, setelah itu kita ubah angka-angka tersebut menjadi alphabet.
+   A = 1		H = 8		O = 15		V = 22  
+   B = 2		I = 9		P = 16		W = 23  
+   C = 3		J = 10		Q = 17		X = 24  
+   D = 4		K = 11		R = 18		Y = 25  
+   E = 5		L = 12		S = 19		Z = 26  
+   F = 6		M = 13		T = 20  
+   G = 7		N = 14		U =21
 
-10 = J  
-4 = D  
-18 = R  
-14 = N  
-10 = J  
-1 = A
+   Kemudian, kita melakukan filter untuk mencari packet no. 7812 dengan menggunakan query frame.number==7812.
 
-Setelah diurutkan, dapatlah hasilnya yaitu JDRNJA.
+   ![6a](assets/6a.png)
 
-![6b](assets/6b.png)
+   Setelah mendapat packet no. 7812, bisa kita lihat source address paket tersebut yaitu 104.18.14.101, setelah itu kita ubah angka-angka tersebut menjadi alphabet.
+
+   10 = J  
+   4 = D  
+   18 = R  
+   14 = N  
+   10 = J  
+   1 = A
+
+   Setelah diurutkan, dapatlah hasilnya yaitu JDRNJA.
+
+   ![6b](assets/6b.png)
 
 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
 
