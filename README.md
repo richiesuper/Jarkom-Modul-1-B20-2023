@@ -135,12 +135,12 @@ Pada clue di atas bisa disimpulkan bahwa kita hanya perlu fokus pada source addr
 - a1 e5 u21
 Pada clue berikut kita perlu mengurutkan angka-angka sesuai alphabet.
 
-A = 1		H = 8		O = 15		V = 22
-B = 2		I = 9		P = 16		W = 23
-C = 3		J = 10	Q = 17		X = 24
-D = 4		K = 11	R = 18		Y = 25
-E = 5		L = 12	S = 19		Z = 26
-F = 6		M = 13	T = 20
+A = 1		H = 8		O = 15		V = 22  
+B = 2		I = 9		P = 16		W = 23  
+C = 3		J = 10	Q = 17		X = 24  
+D = 4		K = 11	R = 18		Y = 25  
+E = 5		L = 12	S = 19		Z = 26  
+F = 6		M = 13	T = 20  
 G = 7		N = 14	U =21
 
 Kemudian, kita melakukan filter untuk mencari packet no. 7812 dengan menggunakan query frame.number==7812.
